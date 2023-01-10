@@ -6,7 +6,7 @@
  */
 
 function primeiro() {
-    return "Primeiro alterado"
+    return "Primeiro"
 }
 
 export default primeiro;
