@@ -14,7 +14,7 @@ function megasena() {
     n = [...new Set(n)];
     console.log(n, n.length, quantity);
     
-    if(n.length === quantity) setNumbers(n);
+    if(n.length === quantity) setNumbers(n.sort((a,b) => a - b));
     else randomNumbers()
   }
 
