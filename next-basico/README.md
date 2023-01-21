@@ -7,3 +7,12 @@
 * Podemos importar o head dentro do next, conforme abaixo:
 import Head from 'next/head'
 Dessa forma aplicar mudanças em metatags, links, titles...
+
+* Nossas rotas podem ser uma pasta contendo um arquivos index.
+pages > rotas > index.html
+para acessar fica: 
+localhost:3000/rotas 
+
+* As rotas criadas são case sensitive. Por exemplo: 
+Se eu criar um arquivo em page chamado "outraRota"
+a url deve ser exatamente "outraRota", se usarmos "outrarota" retornará 404.
