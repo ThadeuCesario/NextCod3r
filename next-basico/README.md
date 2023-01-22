@@ -16,3 +16,5 @@ localhost:3000/rotas
 * As rotas criadas são case sensitive. Por exemplo: 
 Se eu criar um arquivo em page chamado "outraRota"
 a url deve ser exatamente "outraRota", se usarmos "outrarota" retornará 404.
+
+* Podemos utilizar o componente <Link> do next para navegar entre rotas

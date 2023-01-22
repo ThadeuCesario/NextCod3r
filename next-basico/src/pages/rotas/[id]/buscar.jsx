@@ -3,13 +3,13 @@ import { useRouter } from "next/router";
 
 function buscar() {
   const router = useRouter();
-  const {query: { id }} = useRouter();
+  const {query: { id, nome }} = useRouter();
 
   console.log(router);
 
   return (
     <div>
-      <h1>{id}</h1>
+      <h1>Nome: {nome} | Código: {id}</h1>
     </div>
   );
 }
