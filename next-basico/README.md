@@ -18,3 +18,10 @@ Se eu criar um arquivo em page chamado "outraRota"
 a url deve ser exatamente "outraRota", se usarmos "outrarota" retornará 404.
 
 * Podemos utilizar o componente <Link> do next para navegar entre rotas
+
+* Na apis podemos utilizar o modo dinâmico para receber parâmetros. 
+Basta adicionar o ...
+Por exemplo o arquivo [...dados].js
+
+* Podemos deixar os parametros na api como algo opcional
+Basta utilizar um duplo conchetes
