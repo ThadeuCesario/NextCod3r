@@ -1,0 +1,35 @@
+.presente {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative
+}
+
+.tampa {
+    width: 100px;
+    height: 25px;
+    background-color: #7aa944;
+}
+
+.caixa {
+    width: 90px;
+    height: 60px;
+    background-color: #5c7e32;
+}
+
+.laco1 {
+    position: absolute;
+    top: 0;
+    background-color: #f00;
+    width: 15px;
+    height: 85px;
+}
+
+.laco2 {
+    position: absolute;
+    top: 40px;
+    width: 90px;
+    height: 15px;
+    background-color: #f00;
+}
