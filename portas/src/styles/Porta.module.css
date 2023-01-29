@@ -11,6 +11,8 @@
 .estrutura {
     display: flex;
     flex-grow: 1;
+    justify-content: center;
+    align-items: flex-end;
     border: 5px solid brown;
     border-bottom: none;
     width: 90%;
@@ -19,6 +21,7 @@
 
 .porta {
     display: flex;
+    height: 100%;
     flex-direction: column;
     background-color: chocolate;
     padding: 15px;

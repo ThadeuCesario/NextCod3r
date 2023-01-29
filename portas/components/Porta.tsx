@@ -1,3 +1,4 @@
+import Presente from "../components/Presente";
 import PortaModel from "../model/porta";
 import styles from "../src/styles/Porta.module.css";
 
@@ -20,12 +21,15 @@ function Porta(props: PortaProps) {
   return (
     <div className={styles.area} onClick={alternarSelecao}>
       <div className={`${styles.estrutura} ${selecionada}`}>
-        {value.aberta ? null : (
+        {value.fechada ? (
           <div className={styles.porta}>
             <div className={styles.numero}>{value.numero}</div>
             <div className={styles.macaneta} onClick={abrir} />
-          </div>
-        )}
+          </div> ) : (
+            value.temPresente ? (
+              <Presente />
+            ) : null
+          )}
       </div>
       <div className={styles.chao}></div>
     </div>
