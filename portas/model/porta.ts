@@ -34,7 +34,7 @@ class PortaModel {
 
     alternarSelecao() {
         const selecionada = !this.selecionada;
-        return new PortaModel(this.numero, this.temPresente, selecionada, this.aberta);
+        return new PortaModel(this.numero, this.temPresente, selecionada, this.aberta)
     }
 
     abrir() {
