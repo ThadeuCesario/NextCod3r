@@ -1,16 +1,24 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import Link from "next/link";
-import { useState } from "react";
-import { criarPortas, atualizarPortas } from "../../functions/portas";
-import Porta from "../../components/Porta";
-import styles from "../styles/Jogo.module.css";
+import { useEffect, useState } from "react";
+import { criarPortas, atualizarPortas } from "../../../../functions/portas";
+import Porta from "../../../../components/Porta";
+import styles from "../../../styles/Jogo.module.css";
+import { useRouter } from "next/router";
 
 
 function jogo() {
+  const router = useRouter();
+  const [portas, setPortas] = useState([]);
+
+  useEffect(() => {
+    const portas = +router.query.portas;
+    const temPresente = +router.query.temPresente;
+
+    setPortas(criarPortas(portas, temPresente));
+  }, [router?.query])
 
   function renderizarPortas() {
-    const [portas, setPortas] = useState(criarPortas(10, 2));
-
     return portas.map((porta) => (
       <Porta 
         key={porta.numero} 
