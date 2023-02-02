@@ -1,14 +1,25 @@
-import { useState } from "react";
-import { criarPortas, atualizarPortas } from "../../functions/portas";
+import Cartao from "../../components/Cartao";
+import styles from "../styles/Formulario.module.css";
+import Link from "next/link";
 
-import Porta from "../../components/Porta";
-
-export default function Home() {
-  const [portas, setPortas] = useState(criarPortas(10, 2));
+export default function Formulario() {
 
   return (
-    <div>
-      <h1>Retornar</h1>
+    <div className={styles.formulario}>
+      <div>
+        <Cartao bgColor="#c039">
+          <h1>Monty Hall</h1>
+        </Cartao>
+        <Cartao></Cartao>
+      </div>
+      <div>
+        <Cartao></Cartao>
+        <Cartao bgColor="#28a085">
+          <Link className={styles.link} href={`/jogo/4/2`}>
+            <h2>Iniciar</h2>
+          </Link>
+        </Cartao>
+      </div>
     </div>
   )
 }
