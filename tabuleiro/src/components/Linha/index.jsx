@@ -9,6 +9,7 @@ function Linha(props) {
     <div className={styles.containerLinha}>
       {quadrados.map((quadrado, index) => (
         <div
+          key={index}
           className={`${styles.quadrado} ${
             index % 2 === 0 && colorInit === "branco"
               ? styles.branco
