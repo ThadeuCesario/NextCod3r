@@ -15,7 +15,7 @@ export async function getStaticPaths() {
     })
 
     return {
-        fallback: false,
+        fallback: true,
         paths
     }
 }
@@ -32,15 +32,19 @@ export async function getStaticProps(context) {
 }
 
 export default function AlunoPorId(props) {
-    const {aluno} = props;
-    return (
-        <div>
-            <h1>Detalhes do aluno</h1>
-            <ul>
-                <li>{aluno.id}</li>
-                <li>{aluno.nome}</li>
-                <li>{aluno.email}</li>
-            </ul>
-        </div>
-    )
+  const { aluno } = props;
+  return (
+    <div>
+      <h1>Detalhes do aluno</h1>
+      {aluno ? (
+        <ul>
+          <li>{aluno.id}</li>
+          <li>{aluno.nome}</li>
+          <li>{aluno.email}</li>
+        </ul>
+      ) : (
+        false
+      )}
+    </div>
+  );
 }
