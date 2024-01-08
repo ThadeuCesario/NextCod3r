@@ -6,6 +6,12 @@ export default function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
+  const idSelecionado = Number(req.query.id);
+  const questoesSelecionadas = questoes.find(questao => questao.id === idSelecionado);
 
-  res.status(200).json(questoes[0].paraObjeto())
+  if (questoesSelecionadas) {
+    res.status(200).json(questoesSelecionadas.paraObjeto());
+  } else {
+    res.status(204).send('');
+  }
 }
