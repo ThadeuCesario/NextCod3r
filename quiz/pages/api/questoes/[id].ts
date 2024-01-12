@@ -7,10 +7,12 @@ export default function handler(
   res: NextApiResponse
 ) {
   const idSelecionado = Number(req.query.id);
-  const questoesSelecionadas = questoes.find(questao => questao.id === idSelecionado);
+  const unicaQuestaoOuNada = questoes.filter(questao => questao.id === idSelecionado);
 
-  if (questoesSelecionadas) {
-    res.status(200).json(questoesSelecionadas.paraObjeto());
+
+  if (unicaQuestaoOuNada.length === 1) {
+    const questaoSelecionada = unicaQuestaoOuNada[0].embaralharRespostas();
+    res.status(200).json(questaoSelecionada.paraObjeto());
   } else {
     res.status(204).send('');
   }
