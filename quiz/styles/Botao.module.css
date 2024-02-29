@@ -7,4 +7,11 @@
     padding: 10px 25px;   
     background-color: #9885f0;
     margin: 40px 0 0 0;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.botao:hover {
+    /* o elemento vai aumentar 10% */
+    transform: scale(1.1); 
 }
