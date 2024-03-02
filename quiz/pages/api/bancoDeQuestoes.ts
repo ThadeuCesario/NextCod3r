@@ -45,7 +45,7 @@ const questoes: QuestaoModel[] = [
         RespostaModel.certa('Marechal Deodoro da Fonseca'),
     ]),
     new QuestaoModel(104, 'Qual é o rio mais longo do mundo?', [
-        RespostaModel.errada('Rio Nilo'),
+        RespostaModel.errada('Rio Negro'),
         RespostaModel.errada('Rio Amazonas'),
         RespostaModel.errada('Rio Amarelo'),
         RespostaModel.certa('Rio Nilo'),
@@ -70,7 +70,7 @@ const questoes: QuestaoModel[] = [
     ]),
     new QuestaoModel(304, 'Em que ano ocorreu a Independência do Brasil?', [
         RespostaModel.errada('1808'),
-        RespostaModel.errada('1822'),
+        RespostaModel.errada('1825'),
         RespostaModel.errada('1848'),
         RespostaModel.certa('1822'),
     ]),

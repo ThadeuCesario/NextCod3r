@@ -2,7 +2,7 @@
     display: flex;
     min-width: 500px;
     width: 80%;
-    align-self: stretch;
+    align-self: center;
     height: 100px;
     margin: 10px;
 }
