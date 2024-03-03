@@ -56,6 +56,26 @@ export default class QuestaoModel {
         return new QuestaoModel(this.#id, this.#enunciado, respostasEmbaralhadas, this.#acertou);
     }
 
+    /**
+     * 
+     * @returns 
+     * Método de instancia é diferente de método estático.
+     * Os métodos estáticos podemos chamadas diretamente na classe. Sem a necessidade de criar um instancia. 
+     * 
+     * Exemplo: 
+     * Método instancia 
+     * const resp = new RespostaModel(...)
+     * resp.metodoDeInstancia()
+     * 
+     * Método estático
+     * RespostaModel.metodoEstatico()
+     */
+
+    static criarUsandoObjeto(obj: QuestaoModel): QuestaoModel {
+        const respostas = obj.respostas.map(resp => RespostaModel.criarUsandoObjeto(resp));
+        return new QuestaoModel(obj.id, obj.enunciado, respostas, obj.acertou);
+    }
+
     paraObjeto() {
         return {
             id: this.#id,
