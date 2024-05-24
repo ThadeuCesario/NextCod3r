@@ -17,7 +17,7 @@ export default function Home() {
 
   async function carregarIdsDasQuestoes() {
     const resp = await fetch(`${BASE_URL}/questionario`);
-    const idsDasQuestoes = await resp.json();
+    const idsDasQuestoes = await resp.json()
     setIdsDasQuestoes(idsDasQuestoes);
   }
 
@@ -35,7 +35,7 @@ export default function Home() {
   }
 
   function idProximaPergunta() {
-    const proximoIndice = idsDasQuestoes.indexOf(questao.id + 1);
+    const proximoIndice = idsDasQuestoes.indexOf(questao.id) + 1;
     return idsDasQuestoes[proximoIndice];
   }
 
@@ -66,22 +66,6 @@ export default function Home() {
     idsDasQuestoes.length > 0 && carregarQuestao(idsDasQuestoes[0]);
   }, [idsDasQuestoes]);
 
-  // return (
-  //   <div style={{
-  //     display: 'flex',
-  //     flexDirection: 'column',
-  //     justifyContent: 'center',
-  //     alignItems: 'center',
-  //     height: '100vh',
-  //   }}>
-  //     <Questionario 
-  //       questao={questao}
-  //       ultima={idProximaPergunta() === undefined}
-  //       questaoRespondida={questaoRespondida}
-  //       irPraProximoPasso={irPraProximoPasso}
-  //     />
-  //   </div>
-  // )
 
   return questao ? (
       <Questionario 
